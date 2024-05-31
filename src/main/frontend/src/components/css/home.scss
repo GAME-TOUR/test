@@ -1,0 +1,224 @@
+.App {
+  background-color: rgb(24, 26, 27);
+}
+
+body {
+  background-color: rgb(24, 26, 27);
+}
+
+button {
+  display: block;
+  position: relative;
+  float: left;
+  width: 80px;
+  padding: 0;
+  border: 1px solid green;
+  font-weight: 600;
+  text-align: center;
+  line-height: 35px;
+  color: white;
+  background-color:rgb(24, 26, 27);
+  border-color: white;
+  border-radius: 5px;
+  transition: all 0.2s ;
+  cursor: pointer;
+}
+
+
+.home-header-container {
+  height: 60px;
+  width: 95%;
+  padding: 0.75%;
+//   margin-bottom: 1%;
+
+.home-header-content {
+      width: 100%;
+      height: 100%;
+      display: flex;
+      
+
+      .left-content {
+          width: 25%;
+          display: flex;
+          padding-left: 4%;
+          cursor: pointer;
+
+          .header-logo {
+              background: url('../test_image/logo.svg') left center no-repeat;
+              background-size: contain;
+              height: 100%;
+              width: 25%;
+          }
+
+          .game-tour-text{
+            font-size: 30px;
+            text-shadow: 1px 1px 1px darkslategray;
+            color: white;
+            align-self: center;
+          }
+      }
+
+      .right-content {   
+          width: 25%;
+          color: white;
+          display: flex;
+          justify-content: right;
+          align-items: center;
+          margin-left: auto;
+          gap: 5%;
+
+          .srch {
+            background-color: black;
+            color: white;
+          }
+
+      }
+
+
+  }
+}
+
+.home-header-banner {
+
+  background: linear-gradient(
+      to bottom, 
+      rgba(20, 20, 20, 0) 10%,
+      rgba(20, 20, 20, 0.25) 25%,
+      rgba(20, 20, 20, 0.5) 50%,
+      rgba(20, 20, 20, 0.75) 75%,
+      rgba(20, 20, 20, 1) 100%),
+      url('../test_image/back.jpg');
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center center;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+
+
+.content-up {
+      padding-top: 35%;
+      // border: 1px solid red;
+      height: 50%;
+
+      .title1 {
+          text-align: center;
+          font-size: 40px;
+          text-shadow: 1px 1px 1px whitesmoke;
+          margin-bottom: 15px;
+          color: white;
+          // margin-top: 30px;
+          margin-bottom: 5px;
+      }
+
+      .title2 {
+          text-align: center;
+          font-size: 40px;
+          text-shadow: 1px 1px 1px whitesmoke;
+          color: white;
+          margin-bottom: 15px;
+      }
+  }
+}
+
+.content-down {
+  // border: 1px solid green;
+  padding-left: 15%;
+  padding-right: 15%;
+  height: 50%;
+
+  .content-down-text {
+    //   padding-left: 15%;
+      color: white;
+      border-bottom: 1px solid gray;
+      margin-bottom: 1%;
+  }
+
+  .options {
+
+      text-align: center;
+      display: flex;
+    //   gap: 3%;
+      justify-content: flex-start;
+
+      .option-child-start {
+        cursor: pointer;
+        flex: 1 1 auto;
+        width: 125px;
+        text-align: center;
+
+        .image-child {
+            width: 125px;
+          //   padding: 10px;
+            text-align: center;
+            margin-right: auto;
+        }
+
+        .text-child {
+            &:hover {
+                color: blue;
+            }
+
+            color: white;
+        }
+    }
+
+      .option-child {
+          cursor: pointer;
+          flex: 1 1 auto;
+          width: 125px;
+          text-align: center;
+
+
+          .image-child {
+              width: 125px;
+            //   padding: 10px;
+              text-align: center;
+              margin: 0 auto;
+          }
+
+          .text-child {
+              &:hover {
+                  color: blue;
+              }
+
+              color: white;
+          }
+      }
+
+  }
+
+}
+
+// 검색 바
+// .search {
+//     width: fit-content;
+//     display: flex;
+//     justify-content: center;
+//     align-items: center;
+//     padding: 10px;
+//     margin: 0 auto;
+//     border-radius: 30px;
+//     background: orange;
+
+//     i {
+//         margin: 0 5px;
+//     }
+
+//     input {
+//         height: 30px;
+//         width: 300px;
+//         background: transparent;
+//         border: none;
+//         outline: none;
+//     }
+// }
+
+// .center-content {
+//   width: 20%;
+//   // border: 1px solid orange;
+//   display: flex;
+//   justify-content: space-between;
+//   align-items: center;
+//   color: white;
+// }
