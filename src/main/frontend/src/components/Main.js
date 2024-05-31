@@ -20,8 +20,23 @@ export default function Home() {
   const [textValue, setTextValue] = useState("");
   const handleSetValue = (e) => {
     setTextValue(e.target.value);
+  };  
+  
+  const Searchbar = (props) => {
+    const [enterKeyword, setEnteredKeyword] = useState("");
+
+    const changeHandler = (e) => {
+        e.preventDefault(); 
+        setEnteredKeyword(e.target.value);
+    };
+
+    const enterHandler = (e) => {
+        if (e.keyCode == 13) {
+            props.searchHandler(enterKeyword, e.keyCode);
+            setEnteredKeyword("");
+        }
+    };
   }
-  // 검색 목록 넣을 상자 선언 
 
   return (
     <React.Fragment>
@@ -57,11 +72,17 @@ export default function Home() {
                   <div className='right-content'>
                       <div className='srch'>
                         <img src={srchicon} width='20px'></img>
-                        <textarea
+                        <Input
+                            type="text"
+                            placeholder="Search here..."
+                            onChange={changeHandler}
+                            onKeyDown={enterHandler}
+                        />
+                        {/* <textarea
                             placeholder='검색어를 입력해주세요'
                             value={textValue}
                             onChange={(e) => handleSetValue(e)}>
-                        </textarea>                        
+                        </textarea>                         */}
                       </div>
                       <button onClick={handlelogin}>로그인</button>
                       <button onClick={handlelogin}>회원가입</button>

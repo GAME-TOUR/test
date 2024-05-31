@@ -41,7 +41,7 @@ textarea:focus {outline: none;}
 
 .home-header-container {
   height: 60px;
-  width: 95%;
+  width: auto;
   padding: 1%;
 //   margin-bottom: 1%;
 
@@ -105,10 +105,10 @@ textarea:focus {outline: none;}
   background: linear-gradient(
       to bottom, 
       rgba(20, 20, 20, 0) 10%,
-      rgba(24, 26, 27, 0.25) 25%,
-      rgba(24, 26, 27, 0.5) 50%,
-      rgba(24, 26, 27, 0.75) 75%,
-      rgba(24, 26, 27, 1) 100%),
+      rgba(24, 26, 27, 0) 25%,
+      rgba(24, 26, 27, 0) 50%,
+      rgba(24, 26, 27, 0.3) 75%,
+      rgba(24, 26, 27, 0.5) 100%),
       url('../test_image/back.jpg');
   background-repeat: no-repeat;
   background-size: cover;
@@ -145,6 +145,8 @@ textarea:focus {outline: none;}
 }
 
 .content-down {
+  background-color: rgb(24, 26, 27);
+  padding-top: 0.4%;
 
   .content-down-text {
       color: white;
@@ -157,15 +159,16 @@ textarea:focus {outline: none;}
       text-align: center;
       display: flex;
       justify-content: flex-start;
+      gap: 1.5%;
 
       .option-child-start {
         cursor: pointer;
         flex: 1 1 auto;
-        width: 125px;
+        width: 100%;
         text-align: center;
 
         .image-child {
-            width: 125px;
+            width: 100%;
           //   padding: 10px;
             text-align: center;
             margin-right: auto;
@@ -184,11 +187,11 @@ textarea:focus {outline: none;}
       .option-child {
           cursor: pointer;
           flex: 1 1 auto;
-          width: 125px;
+          width: 100%;
           text-align: center;
 
           .image-child {
-              width: 125px;
+              width: 100%;
               text-align: center;
               margin: 0 auto;
               border-radius: 5%;
