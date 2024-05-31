@@ -2,10 +2,8 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom';
 
 import Home from './components/Main';
 import Test from './components/Test';
-import Tmp from './components/tmp';
-import SearchPage from './components/Searchpage';
-import GameList from './components/GameListPage';
 import GameDetailPage from './components/GameDetailPage';
+import SearchResultPage from './components/SearchResultPage';
 
 function App() {
   return (
@@ -15,9 +13,8 @@ function App() {
         <Routes>
           <Route path={'/'} element={<Home />}></Route>
           <Route path={'/test'} element={<Test />}></Route>
-          <Route path={'/srch'} element={<GameList />}></Route>
+          <Route path={'/srch'} element={<SearchResultPage />}></Route>
           <Route path='/game/:gameid' element={<GameDetailPage />}></Route>
-          {/* <Route path={'/tmp'} element={<Tmp />}></Route> */}
         </Routes>
       </BrowserRouter>
     </div>

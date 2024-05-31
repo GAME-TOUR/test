@@ -2,6 +2,7 @@ import React, { Component, useState } from 'react';
 import { Link, useNavigate } from "react-router-dom";
 
 import './css/home.scss';
+import srchicon from './test_image/srchicon.svg';
 import pubgImage from './test_image/pubg.jpg';
 import eldenImage from './test_image/eldenring.jpg';
 import hadesImage from './test_image/hades.jpg';
@@ -15,10 +16,12 @@ export default function Home() {
     window.location.href = 'http://localhost:3000/login';
   }
 
+  // 검색어 변수 및 onChange 함수 선언 
   const [textValue, setTextValue] = useState("");
   const handleSetValue = (e) => {
     setTextValue(e.target.value);
   }
+  // 검색 목록 넣을 상자 선언 
 
   return (
     <React.Fragment>
@@ -53,12 +56,12 @@ export default function Home() {
                   </div> */}
                   <div className='right-content'>
                       <div className='srch'>
+                        <img src={srchicon} width='20px'></img>
                         <textarea
                             placeholder='검색어를 입력해주세요'
                             value={textValue}
                             onChange={(e) => handleSetValue(e)}>
-                        </textarea>
-                        
+                        </textarea>                        
                       </div>
                       <button onClick={handlelogin}>로그인</button>
                       <button onClick={handlelogin}>회원가입</button>
