@@ -1,9 +1,5 @@
-.App {
-  background-color: rgb(24, 26, 27);
-}
-
 body {
-  background-color: rgb(24, 26, 27);
+  background-color: rgb(20, 24, 28);
 }
 
 button {
@@ -145,7 +141,7 @@ textarea:focus {outline: none;}
 }
 
 .content-down {
-  background-color: rgb(24, 26, 27);
+  background-color: rgb(20, 24, 28);
   padding-top: 0.4%;
 
   .content-down-text {
@@ -200,15 +196,10 @@ textarea:focus {outline: none;}
         }
 
         .text-child {
-            &:hover {
-                color: blue;
-            }
             color: white;
         }
     }
-
   }
-
 }
 
 // 검색 바

@@ -6,7 +6,7 @@ body {
 }
 
 .section {
-    /* padding: 50px; */
+    padding-left: 3%;
 }
 
 h1 {
@@ -14,6 +14,9 @@ h1 {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    color: white;
+    border-bottom: 1px solid gray;
+    margin-bottom: 1%;
 }
 
 .more {
@@ -33,23 +36,39 @@ h1 {
     display: flex;
     flex-direction: row;
     align-items: center;
-    border: 1px solid #ccc;
-    border-radius: 8px;
+    overflow: hidden;
+    /* display: table-cell; */
+    max-height: 160px;
+    cursor: pointer;
+    &:hover {
+        filter: brightness(75%);
+        h2 {
+            color: rgb(65, 188, 244); 
+        }
+    }
+}
+
+.review-item {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
     overflow: hidden;
     background-color: #f9f9f9;
     box-shadow: 0 2px 5px rgba(0,0,0,0.1);
     max-height: 160px;
+    
 }
 
-.game-item img, .review-item img {
-    width: 150px;
-    height: auto;
-    margin-right: 20px;
+.game-img {
+    object-fit: contain;
+    height: 160px;
+    border-radius: 5%;
 }
 
 .game-details, .review-details {
     padding: 15px;
     text-align: left;
+    color: white;
 }
 
 .review-item h3,

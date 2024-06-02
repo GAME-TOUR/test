@@ -12,9 +12,9 @@ import vrisingImage from './test_image/vrising.jpg';
 
 export default function Home() {
 
- const handleMain = () => window.location.href = 'http://localhost:3000';
  const handlelogin = () => window.location.href = 'http://localhost:8080/login';
- const handleGame = (e) => window.location.href = 'http://localhost:3000/game/game:id'
+ const handleMain = () => navigate(`/`);
+ const handleGame = (e) => navigate(`game/game:id`);
 
   // 검색어 변수 및 onChange 함수 선언 
   const [textValue, setTextValue] = useState("");
@@ -28,7 +28,11 @@ export default function Home() {
   const handleChange = (e) => {
     // setSearchValue(e.target.value);
     console.log(e.target.value);
-    navigate(`search?q=${e.target.value}`);
+    navigate(`search?q=${e.target.value}`, {
+      state: {
+        keyword: `${e.target.value}`
+      },
+    } );
     
   };
 

@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { useLocation } from 'react-router-dom';
 import './css/SearchResultPage.css';
 import SubHeader from './SubHeader';
 
@@ -31,6 +32,11 @@ const dummyReviews = [
 ];
 
 const SearchResultPage = () => {
+
+    const location = useLocation();
+    const key = location.state.keyword;
+    console.log(key);
+
     const [games, setGames] = useState([]);
     const [reviews, setReviews] = useState([]);
     const [showMoreGames, setShowMoreGames] = useState(false);
@@ -48,28 +54,18 @@ const SearchResultPage = () => {
         <div className="App">
             <SubHeader />
             <div className="section">
-                <h1>Games <span className="more" onClick={toggleShowMoreGames}>more..</span></h1>
+                <h1>Search Result for {key}
+                    {/* <span className="more" onClick={toggleShowMoreGames}>more..</span> */}
+                </h1>
                 <div className="game-list">
-                    {games.slice(0, showMoreGames ? games.length : 5).map(game => (
+                    {games.slice(0, showMoreGames ? games.length : 10).map(game => (
                         <div key={game.id} className="game-item">
-                            <img src={game.imageUrl} alt={`Cover of ${game.title}`} />
+                            <img className="game-img" src={game.imageUrl} alt={`Cover of ${game.title}`} />
                             <div className="game-details">
                                 <h2>{game.title}</h2>
                                 <p>{game.description}</p>
                                 <p>Rating: {game.rating}</p>
                             </div>
-                        </div>
-                    ))}
-                </div>
-            </div>
-            <div className="section">
-                <h1>Reviews <span className="more" onClick={toggleShowMoreReviews}>more..</span></h1>
-                <div className="review-list">
-                    {reviews.slice(0, showMoreReviews ? reviews.length : 5).map((review, index) => (
-                        <div key={index} className="review-item">
-                            <h3>{review.username}</h3>
-                            <p>{review.content}</p>
-                            <p>Rating: {review.rating}</p>
                         </div>
                     ))}
                 </div>

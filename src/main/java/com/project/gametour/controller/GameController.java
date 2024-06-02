@@ -37,7 +37,7 @@ public class GameController {
 
     @GetMapping("/api/hello")
     public String hello() {
-        return "hello";
+        return "수정해도 되남?";
     }
 
 }
